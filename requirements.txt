@@ -1,0 +1,6 @@
+gradio>=3.34
+qiskit==0.46.3
+qiskit-aer==0.12.0
+numpy
+scipy
+matplotlib
