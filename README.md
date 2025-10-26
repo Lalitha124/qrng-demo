@@ -41,5 +41,4 @@ The project generates random numbers using quantum circuits simulated via Qiskit
 
 A live interactive demo of this QRNG project is hosted on Hugging Face Spaces:
 
-[QRNG Demo on Hugging Face](https://huggingface.co/spaces/lvsl/qrng-demoh)
-
+https://huggingface.co/spaces/lvsl/qrng-demo
