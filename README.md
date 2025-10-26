@@ -1,24 +1,45 @@
-# Quantum Random Number Generator (QRNG) — Gradio Demo
+# Quantum Random Number Generator (QRNG)
 
-Author: Lalitha Lakkaraju
+This project implements a Quantum Random Number Generator using Qiskit and Gradio. It leverages quantum superposition to produce unbiased random numbers and includes built-in tools for analyzing the randomness statistically through Chi-square tests and Shannon entropy.
 
-This repository contains a Gradio app that simulates / runs a QRNG (uses Qiskit Aer if available) and performs basic statistical analysis (chi-square, Shannon entropy). It is intended to be deployed on Hugging Face Spaces.
+## Features
 
-## Files
-- `app.py` — Gradio app and QRNG logic
-- `requirements.txt` — Python dependencies
+- Quantum circuit construction and calibration
+- Random number generation based on quantum measurement outcomes
+- Error mitigation through inverse calibration matrices
+- Statistical analysis using Chi-square and Shannon entropy
+- Interactive Gradio interface for user control
 
-## Deploy to Hugging Face Spaces (from this GitHub repo)
-1. Create a Hugging Face account (https://huggingface.co).
-2. Go to **Spaces → Create new Space**.
-   - Choose **Gradio** as the SDK.
-   - Under "Repository", select **Use a public Git repository** and paste:
-     `https://github.com/<your-username>/<this-repo-name>`
-3. The Space will build and host the app. You will get a permanent public URL you can embed in your PPT.
+## Functionality
 
-## Quick local test
-```bash
-python -m venv .venv
-source .venv/bin/activate      # or .venv\Scripts\activate on Windows
-pip install -r requirements.txt
-python app.py
+The project generates random numbers using quantum circuits simulated via Qiskit’s Aer backend. If the AerSimulator is unavailable, it falls back to a classical uniform simulator to ensure consistent functionality.
+
+## Files in Repository
+
+| File | Description |
+|------|-------------|
+| app.py | Main application file containing the QRNG logic and Gradio interface |
+| requirements.txt | List of Python dependencies required to run the application |
+| presentation.pptx | Project presentation slides (included in the repository) |
+| demo_video.mp4 | Project video demonstration (included in the repository) |
+
+## Requirements
+
+- gradio>=3.34
+- qiskit==0.46.3
+- qiskit-aer==0.12.0
+- numpy
+- scipy
+- matplotlib
+
+## Additional Resources
+
+- PowerPoint presentation explaining the project’s background, methodology, and results.
+- Video presentation demonstrating the application’s functionality and results.
+
+## Online Demo
+
+A live interactive demo of this QRNG project is hosted on Hugging Face Spaces:
+
+[QRNG Demo on Hugging Face](https://huggingface.co/spaces/lvsl/qrng-demoh)
+
